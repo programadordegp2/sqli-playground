@@ -12,5 +12,7 @@ Located in file called Exploit.txt in this repo.
 3. Start your container with the image:
 
     3a. docker run -p 80:80 -d --name ContainerName YourCustomImageName
-    
+
     3b. Use Docker Desktop application
+
+4. Navigate to http://localhost

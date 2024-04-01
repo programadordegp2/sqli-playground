@@ -11,7 +11,7 @@ Located in file called Exploit.txt in this repo.
 2. Run `docker build -t YourCustomImageName . `
 3. Start your container with the image:
 
-    3a. `docker run -p 80:80 -d --name ContainerName YourCustomImageName`
+    3a. `docker run -d -p 80:80 --name ContainerName YourCustomImageName`
 
     3b. Use Docker Desktop application
 
